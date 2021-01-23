@@ -1,4 +1,15 @@
 execute pathogen#infect()
+
+"" Python macros
+let @c=':s/^/## /'
+let @u=':s/## //'
+
+"" Use system clipboard
+set clipboard+=unnamed  " use the clipboards of vim and win
+set paste               " Paste from a windows or from vim
+set go+=a               " Visual selection automatically copied to the clipboard
+
+"" Some of the above settings influence the below, so run these last
 behave xterm
 syntax on
 set backspace=indent,eol,start
@@ -11,12 +22,3 @@ set background=dark
 set term=screen-256color
 colorscheme gruvbox
 set number
-
-"" Python macros
-let @c=':s/^/## /'
-let @u=':s/## //'
-
-"" Use system clipboard
-set clipboard+=unnamed  " use the clipboards of vim and win
-set paste               " Paste from a windows or from vim
-set go+=a               " Visual selection automatically copied to the clipboard
