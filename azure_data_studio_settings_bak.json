@@ -1,0 +1,55 @@
+{
+    "editor.fontSize": 14,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+	"resultsGrid.fontSize": 14,
+    "resultsGrid.fontFamily": "Microsoft Sans Serif",
+    "resultsGrid.cellPadding": 
+    [  
+        3,
+        10,
+        3,
+        5
+    ],
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.enablePreviewFeatures": true,
+
+    "vim.handleKeys": 
+    {
+        "<C-a>": false, 
+        "<C-c>": false, 
+        "<C-f>": false,
+        "<C-n>": false,
+        "<C-r>": false,
+        "<C-v>": false,
+        "<C-w>": false,
+    },
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+
+    "datasource.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "C777F06B-202E-4480-B475-FA416154D458"
+        }
+    ],
+    "datasource.connections": [
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web109",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "C777F06B-202E-4480-B475-FA416154D458",
+                "databaseDisplayName": ""
+            },
+            "groupId": "C777F06B-202E-4480-B475-FA416154D458",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "5532128f-c1c2-4eb4-b63a-0fa0d7afc756"
+        }
+    ],
+}
