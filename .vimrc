@@ -13,6 +13,10 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
+let &t_ti.="\<Esc>[1 q"
+let &t_SI.="\<Esc>[5 q"
+let &t_EI.="\<Esc>[1 q"
+let &t_te.="\<Esc>[0 q"
 
 "" Some of the above settings influence the below, so run these last
 behave xterm
