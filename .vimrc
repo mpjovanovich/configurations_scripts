@@ -1,12 +1,18 @@
-"" Python macros
+"" Python comment macros
 let @c=':s/^/## /'
 let @u=':s/## //'
-let @y='"+y'
+
+"" Move viewport up a few lines
+nnoremap <C-j> 5<C-e>
+"" Move viewport down a few lines
+nnoremap <C-k> 5<C-y>
 
 "" Use system clipboard
+"" Make sure you have a version of vim with clipboard support. The below should show +clipboard:
+"" vim --version | grep 'clipboard'
 set clipboard=unnamedplus  " use the clipboards of vim and win
-set paste               " Paste from a windows or from vim
 set go+=a               " Visual selection automatically copied to the clipboard
+set paste               " Something to do with paste formatting
 
 "" Use line cursor for insert mode and block cursor everywhere else
 set guicursor=n-v-c:block-Cursor
