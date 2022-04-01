@@ -7,6 +7,10 @@ nnoremap <S-j> 5<C-e>
 "" Move viewport down a few lines
 nnoremap <S-k> 5<C-y>
 
+"" Actually delete stuff
+nnoremap d "_d
+vnoremap d "_d
+
 "" Use system clipboard
 "" Make sure you have a version of vim with clipboard support. The below should show +clipboard:
 "" vim --version | grep 'clipboard'
