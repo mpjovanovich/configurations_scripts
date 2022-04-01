@@ -3,9 +3,9 @@ let @c=':s/^/## /'
 let @u=':s/## //'
 
 "" Move viewport up a few lines
-nnoremap <C-j> 5<C-e>
+nnoremap <S-j> 5<C-e>
 "" Move viewport down a few lines
-nnoremap <C-k> 5<C-y>
+nnoremap <S-k> 5<C-y>
 
 "" Use system clipboard
 "" Make sure you have a version of vim with clipboard support. The below should show +clipboard:
