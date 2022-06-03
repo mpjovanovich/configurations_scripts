@@ -20,9 +20,10 @@
         "<C-c>": false, 
         "<C-f>": false,
         "<C-n>": false,
-        "<C-r>": false,
+        "<C-r>": true,
         "<C-v>": false,
         "<C-w>": false,
+        "<C-x>": false,
     },
     "vim.useSystemClipboard": true,
     "vim.vimrc.enable": true,
@@ -31,6 +32,48 @@
         {
             "name": "ROOT",
             "id": "C777F06B-202E-4480-B475-FA416154D458"
+        },
+        {
+            "name": "Build / Release",
+            "id": "565c712b-7d79-4cf9-82cb-5b91cb52b204",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#85AE72",
+            "description": ""
+        },
+        {
+            "name": "Freepoint",
+            "id": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#A1634D",
+            "description": ""
+        },
+        {
+            "name": "Solutions",
+            "id": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#7F0000",
+            "description": ""
+        },
+        {
+            "name": "MP2",
+            "id": "530c7e66-f568-4387-9915-59032aed4485",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#914576",
+            "description": ""
+        },
+        {
+            "name": "Estonia Dev",
+            "id": "7931039f-53dc-4a14-afd8-2f061109536f",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#98AFC7",
+            "description": ""
+        },
+        {
+            "name": "Intelometry",
+            "id": "77335399-493d-4e21-96cc-79ae4a23c572",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#4452A6",
+            "description": ""
         }
     ],
     "datasource.connections": [
@@ -43,13 +86,596 @@
                 "user": "",
                 "password": "",
                 "applicationName": "azdata",
-                "groupId": "C777F06B-202E-4480-B475-FA416154D458",
+                "groupId": "565c712b-7d79-4cf9-82cb-5b91cb52b204",
                 "databaseDisplayName": ""
             },
-            "groupId": "C777F06B-202E-4480-B475-FA416154D458",
+            "groupId": "e9541d8f-cf01-4a86-9fb4-a7b591bbf44e",
             "providerName": "MSSQL",
             "savePassword": true,
             "id": "5532128f-c1c2-4eb4-b63a-0fa0d7afc756"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "build",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "565c712b-7d79-4cf9-82cb-5b91cb52b204",
+                "databaseDisplayName": ""
+            },
+            "groupId": "565c712b-7d79-4cf9-82cb-5b91cb52b204",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "addedc1e-ddb3-4431-bc9a-f550615ae785"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web109",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "4a3c1d5c-5296-4184-aade-290b0dba4ea3"
+        },
+        {
+            "options": {
+                "connectionName": "Champion Prod: PZPCESIRWDB03",
+                "server": "PZPCESIRWDB03",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "aae90c52-a708-41f3-8b1d-05a1bb7a4d57"
+        },
+        {
+            "options": {
+                "connectionName": "Champion Prod: PZPCESIRWDB04",
+                "server": "PZPCESIRWDB04",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "0069a0eb-5860-408f-84c0-5a5b1e5a4ffb"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB05",
+                "server": "PZPWIRDB05",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "e5b91130-6b58-4574-966e-46b361e8a0d2"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod (Master): PZPWIRDB08",
+                "server": "PZPWIRDB08",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "99ad8038-d79e-467e-a570-7ce2a3848eea"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB01",
+                "server": "PZPWIRDB01",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "d650fb88-149c-4352-96ce-7908dc2b7d8d"
+        },
+        {
+            "options": {
+                "connectionName": "Champion QA: PZDWFIRDB04",
+                "server": "PZDWFIRDB04",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "0756e2a3-bc31-4934-848b-816f0c1f2700"
+        },
+        {
+            "options": {
+                "connectionName": "Champion QA: PZDWFIRDB05",
+                "server": "PZDWFIRDB05",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "76adedbe-d43a-4e85-b72f-a6bcaa49467e"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "prd-db-sql-34",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "0fe3250f-efb9-4d10-8576-237dd9d0053e"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web112",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+                "databaseDisplayName": ""
+            },
+            "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "2575553f-a17b-45a4-85e2-07cdade6727b"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "prd-db-sql-55",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "955d1b36-df83-4577-95ad-d0b144d982e2"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "qa-db-sql-50",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "64b289e1-c7b2-474b-ba05-21277ff04f8b"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "MP2QASQL01",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "sa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+                "databaseDisplayName": ""
+            },
+            "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "ca13df87-aa65-4706-ad04-82a7a464a0c7"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "release",
+                "database": "inretail_base",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "originalDatabase": "inretail_base",
+                "groupId": "565c712b-7d79-4cf9-82cb-5b91cb52b204",
+                "databaseDisplayName": "inretail_base"
+            },
+            "groupId": "565c712b-7d79-4cf9-82cb-5b91cb52b204",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "6fb929f4-5160-4bec-93ab-78238a6591cc"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web201",
+                "database": "IntTimeTrackerNext",
+                "authenticationType": "SqlLogin",
+                "user": "sa",
+                "password": "",
+                "applicationName": "azdata",
+                "originalDatabase": "IntTimeTrackerNext",
+                "groupId": "77335399-493d-4e21-96cc-79ae4a23c572",
+                "databaseDisplayName": "IntTimeTrackerNext"
+            },
+            "groupId": "77335399-493d-4e21-96cc-79ae4a23c572",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "f6820a4d-36b7-4ffd-a9e7-8498ed83d2a6"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web63",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "53cdf479-fef8-4679-8127-13aa24603355"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web71",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "7931039f-53dc-4a14-afd8-2f061109536f",
+                "databaseDisplayName": ""
+            },
+            "groupId": "7931039f-53dc-4a14-afd8-2f061109536f",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "a83852db-cfd9-4b68-b22a-77601208994f"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "prd-db-sql-49",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "2bb5be07-4506-4b1f-92bb-c55ddfdc4186"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "qa-db-sql-49",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "83a0f0ff-00c2-4d3e-9519-ec5a1c34b104"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB07",
+                "server": "PZPWIRDB07",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "f5fba414-d4a9-4005-87ea-4e97ab02bdc6"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB04",
+                "server": "PZPWIRDB04",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "0f4c3350-78bc-4f9a-939c-9f85593eb1cf"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web64",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "c02e2f7c-6ba3-4f6d-8aca-36a7fbf5940d"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web65",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "95b38e2c-88aa-4f93-8979-0d66cb45b6f2"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web30",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "77335399-493d-4e21-96cc-79ae4a23c572",
+                "databaseDisplayName": ""
+            },
+            "groupId": "77335399-493d-4e21-96cc-79ae4a23c572",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "70c8ab5e-2dc0-46e0-a17f-e5f5ef27647f"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web113",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+                "databaseDisplayName": ""
+            },
+            "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "e9eb0bd2-8205-4b16-b45c-a0745ebdf1a3"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "web22",
+                "database": "",
+                "authenticationType": "Integrated",
+                "user": "",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "77335399-493d-4e21-96cc-79ae4a23c572",
+                "databaseDisplayName": ""
+            },
+            "groupId": "77335399-493d-4e21-96cc-79ae4a23c572",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "f904f236-82ee-49dc-9b7d-8d0c4274b54f"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "MP2PRDSQL01",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "sa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+                "databaseDisplayName": ""
+            },
+            "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "188de728-3f84-4c0e-a965-ae9c90bceb33"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "qa-db-sql-34",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14199714-282e-4eb1-b3a3-739ca63d8152",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "8fbc0858-2192-44f1-b123-4ef7862d90c7"
+        },
+        {
+            "options": {
+                "connectionName": "",
+                "server": "MP2QASSRS01",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "sa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+                "databaseDisplayName": ""
+            },
+            "groupId": "530c7e66-f568-4387-9915-59032aed4485",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "d65b397c-a1ac-4449-89c3-593895598344"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB06",
+                "server": "PZPWIRDB06",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "ef41b3eb-14d8-4159-a377-f63fb550dac5"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB02",
+                "server": "PZPWIRDB02",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "6d7f93ec-1351-4287-80c4-a885e294b654"
+        },
+        {
+            "options": {
+                "connectionName": "Solutions Prod: PZPWIRDB03",
+                "server": "PZPWIRDB03",
+                "database": "",
+                "authenticationType": "SqlLogin",
+                "user": "isa",
+                "password": "",
+                "applicationName": "azdata",
+                "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+                "databaseDisplayName": ""
+            },
+            "groupId": "14f55979-48dc-4ab2-8fa2-2cb6dd2daeea",
+            "providerName": "MSSQL",
+            "savePassword": true,
+            "id": "0d817788-3df7-46ca-b2ab-ac171c73dcc3"
         }
     ],
+    "editor.renderWhitespace": "all",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.enableMenuBarMnemonics": false,
+    "window.autoDetectHighContrast": false,
+    "window.customMenuBarAltFocus": false,
+    "datasource.connectionsSortOrder": "displayName",
+    "workbench.editor.centeredLayoutAutoResize": false,
+    "workbench.editor.splitOnDragAndDrop": false,
+    "workbench.editorAssociations": {
+        "*.{sqlplan}": "workbench.editor.executionplan"
+    },
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.autoClosingBrackets": "never",
+    "editor.acceptSuggestionOnEnter": "off",
+    "queryEditor.tabColorMode": "border",
+    "workbench.editor.openPositioning": "last",
 }
