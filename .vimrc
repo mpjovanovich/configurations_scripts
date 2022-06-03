@@ -1,3 +1,6 @@
+"" STUFF I FORGOT ALOT
+"" To paste into command bar: Ctrl-r, "
+
 "" Python comment macros
 let @c=':s/^/## /'
 let @u=':s/## //'
