@@ -41,6 +41,8 @@ set softtabstop=4
 set shiftwidth=4
 set clipboard=unnamed
 set number
+set visualbell
+set t_vb=
 
 "" Windows - WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
