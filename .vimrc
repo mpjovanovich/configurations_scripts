@@ -5,6 +5,9 @@
 let @c=':s/^/## /'
 let @u=':s/## //'
 
+"" HTML close a tag macro
+let @h='bbvf>yf>pbi/h'
+
 "" Move viewport up a few lines
 nnoremap <S-j> 5<C-e>
 "" Move viewport down a few lines
