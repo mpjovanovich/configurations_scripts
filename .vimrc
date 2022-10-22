@@ -36,6 +36,7 @@ behave xterm
 syntax on
 set backspace=indent,eol,start
 set expandtab
+set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
