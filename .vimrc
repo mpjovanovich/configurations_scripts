@@ -17,6 +17,9 @@ nnoremap <S-k> 5<C-y>
 nnoremap d "_d
 vnoremap d "_d
 
+"" Don't bring up a help screen when I fatfinger and hit F1 instead of ESC
+nmap <F1> <nop>
+
 "" Use system clipboard
 "" Make sure you have a version of vim with clipboard support. The below should show +clipboard:
 "" vim --version | grep 'clipboard'
