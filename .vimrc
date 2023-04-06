@@ -49,6 +49,7 @@ set shiftwidth=4
 set clipboard=unnamed
 set number
 set visualbell
+set noerrorbells
 set t_vb=
 set ff=unix
 
