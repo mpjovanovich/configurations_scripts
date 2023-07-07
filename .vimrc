@@ -1,9 +1,35 @@
-"" STUFF I FORGOT ALOT
+"" STUFF I FORGET ALOT:
+"" Regex: https://vimregex.com/
+""     See 'Anchors'
+"" To add special chars in vimrc use Ctrl-q in insert mode instead of Ctrl-v.
 "" To paste into command bar: Ctrl-r, "
+"" Wrap multiline comments via 'gw' (wrap)
+"" Unwrap via 'J' (join)
 
-"" Python comment macros
-let @c=':s/^/## /'
-let @u=':s/## //'
+"" Get rid of annoying delay after hitting certain keys, like Esc.
+set timeoutlen=1000
+set ttimeoutlen=5
+
+"" Probabaly worth remaping keys to launch these macros.
+"" Python code comment macros
+autocmd!
+
+autocmd filetype python let @c=':s/^/# /e'
+autocmd filetype python let @u=':s/^# //e'
+
+autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
+autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
+"" not sure, but text covers all other filetypes
+
+"" Block comment (apply text width)
+autocmd filetype python let @b=':s/# #############################################################################\n//egvovip:s/^# //e:set tw=77vipgwvip:s/^/# /{o# 77a#}O# 77a#:set tw=79'
+autocmd filetype c,javascript,typescript,text let @b=':s/^\* //e:set tw=77vipgwvip:s/^/\* /e:set tw=79'
+
+"" Python documentation comment macros
+
+"" Test
+""autocmd filetype python let @t='iPYTHON!'
+""autocmd filetype text let @t='iTEXT!'
 
 "" HTML close a tag macro
 let @h='bbvf>yf>pbi/h'
@@ -19,6 +45,9 @@ vnoremap d "_d
 
 "" Don't bring up a help screen when I fatfinger and hit F1 instead of ESC
 nmap <F1> <nop>
+
+"" Set the text wrap width
+set tw=79
 
 "" Use system clipboard
 "" Make sure you have a version of vim with clipboard support. The below should show +clipboard:
@@ -49,7 +78,6 @@ set shiftwidth=4
 set clipboard=unnamed
 set number
 set visualbell
-set noerrorbells
 set t_vb=
 set ff=unix
 
