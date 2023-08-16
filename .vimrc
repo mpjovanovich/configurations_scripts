@@ -14,25 +14,15 @@ set ttimeoutlen=5
 "" Python code comment macros
 autocmd!
 
-autocmd filetype python let @c=':s/^/# /e'
-autocmd filetype python let @u=':s/^# //e'
+autocmd filetype python let @c=':s/^/# /e'
+autocmd filetype python let @u=':s/^# //e'
 
-autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
-autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
+autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
+autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
 "" not sure, but text covers all other filetypes
 
-"" Block comment (apply text width)
-autocmd filetype python let @b=':s/# #############################################################################\n//egvovip:s/^# //e:set tw=77vipgwvip:s/^/# /{o# 77a#}O# 77a#:set tw=79'
-autocmd filetype c,javascript,typescript,text let @b=':s/^\* //e:set tw=77vipgwvip:s/^/\* /e:set tw=79'
-
-"" Python documentation comment macros
-
-"" Test
-""autocmd filetype python let @t='iPYTHON!'
-""autocmd filetype text let @t='iTEXT!'
-
 "" HTML close a tag macro
-let @h='bbvf>yf>pbi/h'
+let @h='bbvf>yf>pbi/h'
 
 "" Move viewport up a few lines
 nnoremap <S-j> 5<C-e>
@@ -89,4 +79,3 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
-
