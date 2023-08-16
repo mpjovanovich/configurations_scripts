@@ -6,12 +6,23 @@
 "" Wrap multiline comments via 'gw' (wrap)
 "" Unwrap via 'J' (join)
 
-"" Python comment macros
-let @c=':s/^/## /'
-let @u=':s/## //'
+"" Get rid of annoying delay after hitting certain keys, like Esc.
+set timeoutlen=1000
+set ttimeoutlen=5
+
+"" Probabaly worth remaping keys to launch these macros.
+"" Python code comment macros
+autocmd!
+
+autocmd filetype python let @c=':s/^/# /e'
+autocmd filetype python let @u=':s/^# //e'
+
+autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
+autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
+"" not sure, but text covers all other filetypes
 
 "" HTML close a tag macro
-let @h='bbvf>yf>pbi/h'
+let @h='bbvf>yf>pbi/h'
 
 "" Get rid of annoying delay after hitting certain keys, like Esc.
 set timeoutlen=1000
@@ -62,6 +73,7 @@ set clipboard=unnamed
 set number
 set visualbell
 set t_vb=
+set ff=unix
 
 "" Windows - WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point

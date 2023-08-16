@@ -9,3 +9,7 @@ alias ls='ls --color=none'
 
 ## Only show the username in the prompt.
 export PS1="\u: "
+
+## Set the default editor for all programs
+export VISUAL=vim
+export EDITOR="$VISUAL"
