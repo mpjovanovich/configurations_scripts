@@ -1,5 +1,10 @@
-"" STUFF I FORGOT ALOT
+"" STUFF I FORGET ALOT:
+"" Regex: https://vimregex.com/
+""     See 'Anchors'
+"" To add special chars in vimrc use Ctrl-q in insert mode instead of Ctrl-v.
 "" To paste into command bar: Ctrl-r, "
+"" Wrap multiline comments via 'gw' (wrap)
+"" Unwrap via 'J' (join)
 
 "" Python comment macros
 let @c=':s/^/## /'
@@ -7,6 +12,10 @@ let @u=':s/## //'
 
 "" HTML close a tag macro
 let @h='bbvf>yf>pbi/h'
+
+"" Get rid of annoying delay after hitting certain keys, like Esc.
+set timeoutlen=1000
+set ttimeoutlen=5
 
 "" Move viewport up a few lines
 nnoremap <S-j> 5<C-e>
@@ -19,6 +28,9 @@ vnoremap d "_d
 
 "" Don't bring up a help screen when I fatfinger and hit F1 instead of ESC
 nmap <F1> <nop>
+
+"" Set the text wrap width
+set tw=79
 
 "" Use system clipboard
 "" Make sure you have a version of vim with clipboard support. The below should show +clipboard:
@@ -59,4 +71,3 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
-
