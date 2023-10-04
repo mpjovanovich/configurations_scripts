@@ -6,8 +6,8 @@
 "" Wrap multiline comments via 'gw' (wrap)
 "" Unwrap via 'J' (join)
 
-" Reassign $ to g_. Really sick of grabbing line feed when I just want the text.
-let $ = g_
+"" Reassign $ to g_. Really sick of grabbing line feed when I just want the text.
+let $='g_'
 
 "" Get rid of annoying delay after hitting certain keys, like Esc.
 set timeoutlen=1000
