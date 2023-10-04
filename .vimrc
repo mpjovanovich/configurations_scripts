@@ -6,6 +6,9 @@
 "" Wrap multiline comments via 'gw' (wrap)
 "" Unwrap via 'J' (join)
 
+" Reassign $ to g_. Really sick of grabbing line feed when I just want the text.
+let $ = g_
+
 "" Get rid of annoying delay after hitting certain keys, like Esc.
 set timeoutlen=1000
 set ttimeoutlen=5
@@ -14,19 +17,25 @@ set ttimeoutlen=5
 "" Python code comment macros
 autocmd!
 
-autocmd filetype python let @c=':s/^/# /e'
-autocmd filetype python let @u=':s/^# //e'
+autocmd filetype python let @c=':s/^/# /e'
+autocmd filetype python let @u=':s/^# //e'
 
-autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
-autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
+autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
+autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
 "" not sure, but text covers all other filetypes
 
-"" HTML close a tag macro
-let @h='bbvf>yf>pbi/h'
+"" Block comment (apply text width)
+autocmd filetype python let @b=':s/# #############################################################################\n//egvovip:s/^# //e:set tw=77vipgwvip:s/^/# /{o# 77a#}O# 77a#:set tw=79'
+autocmd filetype c,javascript,typescript,text let @b=':s/^\* //e:set tw=77vipgwvip:s/^/\* /e:set tw=79'
 
-"" Get rid of annoying delay after hitting certain keys, like Esc.
-set timeoutlen=1000
-set ttimeoutlen=5
+"" Python documentation comment macros
+
+"" Test
+""autocmd filetype python let @t='iPYTHON!'
+""autocmd filetype text let @t='iTEXT!'
+
+"" HTML close a tag macro
+let @h='bbvf>yf>pbi/h'
 
 "" Move viewport up a few lines
 nnoremap <S-j> 5<C-e>
@@ -83,3 +92,4 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
+
