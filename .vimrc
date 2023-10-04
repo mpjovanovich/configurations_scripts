@@ -6,8 +6,9 @@
 "" Wrap multiline comments via 'gw' (wrap)
 "" Unwrap via 'J' (join)
 
-"" Reassign $ to g_. Really sick of grabbing line feed when I just want the text.
-let $='g_'
+"" Reassign $ to g_ for visual mode. Really sick of grabbing line feed when I
+"" just want the text.
+xmap $ g_
 
 "" Get rid of annoying delay after hitting certain keys, like Esc.
 set timeoutlen=1000
@@ -22,17 +23,6 @@ autocmd filetype python let @u=':s/^# //e'
 
 autocmd filetype c,javascript,typescript,text let @c=':s~^~// ~e'
 autocmd filetype c,javascript,typescript,text let @u=':s~^// ~~e'
-"" not sure, but text covers all other filetypes
-
-"" Block comment (apply text width)
-autocmd filetype python let @b=':s/# #############################################################################\n//egvovip:s/^# //e:set tw=77vipgwvip:s/^/# /{o# 77a#}O# 77a#:set tw=79'
-autocmd filetype c,javascript,typescript,text let @b=':s/^\* //e:set tw=77vipgwvip:s/^/\* /e:set tw=79'
-
-"" Python documentation comment macros
-
-"" Test
-""autocmd filetype python let @t='iPYTHON!'
-""autocmd filetype text let @t='iTEXT!'
 
 "" HTML close a tag macro
 let @h='bbvf>yf>pbi/h'
