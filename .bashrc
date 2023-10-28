@@ -14,3 +14,12 @@ export PS1="\[\033[01;36m\]\u: \[\e[01;37m\]"
 ## Set the default editor for all programs
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+## Add, commit, push in one command.
+## Usage: git_acp 'My commit message.'
+function git_acp() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
+
