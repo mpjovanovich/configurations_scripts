@@ -19,7 +19,7 @@ export EDITOR="$VISUAL"
 ## Usage: git_acp 'My commit message.'
 function git_acp() {
     git add .
-    git commit -a -m "$1"
+    git commit --allow-empty-message -a -m "$1"
     git push
 }
 
