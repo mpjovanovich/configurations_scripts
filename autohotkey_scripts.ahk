@@ -6,17 +6,10 @@
 
 ; See for numpad keys: https://www.autohotkey.com/docs/v1/KeyList.htm#numpad
 
-; Map middle mouse scroll to buttons.
-NumpadAdd::WheelUp
-NumpadEnter::WheelDown
-F1::WheelUp
-F2::WheelDown
+; These scroll too far for my liking, so override
+PgUp::WheelUp
+PgDn::WheelDown
 
-; Push F1, F2 over b/c of above.
-F3::F1
-F4::F2
-
-; Note that this is the same as running Shift+Numpad1 if num lock is on.
-NumpadEnd::Run 'D:\git\configurations_scripts\INFM109_websites.bat'
-; Note that this is the same as running Shift+Numpad2 if num lock is on.
-NumpadDown::Run 'D:\git\configurations_scripts\SDEV120_websites.bat'
+; ^=Ctrl
+^Numpad1::Run 'D:\CourseScripts\SDEV120_01D.bat'
+^Numpad2::Run 'D:\CourseScripts\SDEV120_05D.bat'
