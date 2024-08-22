@@ -8,12 +8,12 @@
 
 ; These scroll too far for my liking, so override
 PgDn:: {
-    Loop 10 {
+    Loop 3 {
         Send "{Down}"
     }
 }
 PgUp:: {
-    Loop 10 {
+    Loop 3 {
         Send "{Up}"
     }
 }
