@@ -7,8 +7,16 @@
 ; See for numpad keys: https://www.autohotkey.com/docs/v1/KeyList.htm#numpad
 
 ; These scroll too far for my liking, so override
-PgUp::WheelUp
-PgDn::WheelDown
+PgDn:: {
+    Loop 10 {
+        Send "{Down}"
+    }
+}
+PgUp:: {
+    Loop 10 {
+        Send "{Up}"
+    }
+}
 
 ; ^=Ctrl
 ^Numpad1::Run 'D:\CourseScripts\SDEV120_01D.bat'
