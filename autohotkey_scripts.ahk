@@ -19,5 +19,6 @@ PgUp:: {
 }
 
 ; ^=Ctrl
-^Numpad1::Run 'D:\CourseScripts\SDEV120_01D.bat'
-^Numpad2::Run 'D:\CourseScripts\SDEV120_05D.bat'
+; !=Alt
+!Numpad1::Run 'C:\Users\mjovanovich\CourseScripts\SDEV120_01D.bat'
+!Numpad2::Run 'C:\Users\mjovanovich\CourseScripts\SDEV120_05D.bat'
