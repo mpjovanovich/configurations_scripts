@@ -26,6 +26,7 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 export LIBGL_ALWAYS_INDIRECT=1
 
 alias python=python3
+alias apt-all='sudo apt update && sudo apt upgrade -y'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
