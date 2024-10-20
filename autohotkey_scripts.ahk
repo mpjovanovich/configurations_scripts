@@ -7,33 +7,31 @@
 ; See for numpad keys: https://www.autohotkey.com/docs/v1/KeyList.htm#numpad
 
 ; These scroll too far for my liking, so override
-PgUp::{
-    Loop 3 {
+scrollAmount := 3
+
+PgUp::
+F1::
+{
+    Loop scrollAmount {
         Send "{Up}"
     }
 }
-PgDn::{
-    Loop 3 {
+
+PgDn::
+F2::
+{
+    Loop scrollAmount {
         Send "{Down}"
     }
 }
 
-; Save my middle finger from falling off.
-F1::{
-    Loop 3 {
-        Send "{Up}"
-    }
-}
-F2::{
-    Loop 3 {
-        Send "{Down}"
-    }
-}
-F3::F1
-F4::F2
+; Remap original F1 and F2 functionality to F3 and F4
+F3::Send "{F1}"
+F4::Send "{F2}"
 
 
 ; ^ = Ctrl
 ; ! = Alt
-!Numpad1::Run 'D:\CourseScripts\SDEV120_01D.bat'
-!Numpad2::Run 'D:\CourseScripts\SDEV120_05D.bat'
+!Numpad1::Run 'D:\CourseScripts\SDEV120_02D.bat'
+!Numpad2::Run 'D:\CourseScripts\SDEV120_C8D.bat'
+!Numpad3::Run 'D:\CourseScripts\SDEV140_04D.bat'
