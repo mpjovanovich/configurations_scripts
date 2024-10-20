@@ -8,27 +8,24 @@
 
 ; These scroll too far for my liking, so override
 scrollAmount := 3
-
-PgUp::
-F1::
-{
+PgUp::{
     Loop scrollAmount {
         Send "{Up}"
     }
 }
-
-PgDn::
-F2::
-{
+PgDn::{
     Loop scrollAmount {
         Send "{Down}"
     }
 }
 
+; F1 and F2 for middle mouse scroll
+F1::Send "{WheelUp}"
+F2::Send "{WheelDown}"
+
 ; Remap original F1 and F2 functionality to F3 and F4
 F3::Send "{F1}"
 F4::Send "{F2}"
-
 
 ; ^ = Ctrl
 ; ! = Alt
