@@ -1,4 +1,4 @@
-; For AutoHotkey v2.0
+;For AutoHotkey v2.0
 
 ; To run this script on startup:
 ; - Create a shortcut for this .ahk file.
@@ -22,32 +22,12 @@ PgDn::
         Send "{Down}"
 }
 
-NumpadAdd::
-{
-    if GetKeyState("NumLock", "T") {
-        ; If Num Lock is on, send NumpadAdd
-        Send "{NumpadAdd}"
-    } else {
-        ; If Num Lock is off, scroll up `scrollAmount` times
-        Loop scrollAmount
-            Send "{WheelUp}"
-    }
-}
-
-NumpadEnter::
-{
-    if GetKeyState("NumLock", "T") {
-        ; If Num Lock is on, send NumpadAdd
-        Send "{NumpadEnter}"
-    } else {
-        ; If Num Lock is off, scroll down `scrollAmount` times
-        Loop scrollAmount
-            Send "{WheelDown}"
-    }
-}
+#HotIf !GetKeyState("NumLock", "T")
+NumpadAdd::Send "{WheelUp " scrollAmount "}"
+NumpadEnter::Send "{WheelDown " scrollAmount "}"
+#HotIf
 
 ; Alt + Numpad shortcuts for running scripts
 ; !Numpad1::Run "D:\CourseScripts\SDEV120_02D.bat"
 ; !Numpad2::Run "D:\CourseScripts\SDEV120_C8D.bat"
 ; !Numpad3::Run "D:\CourseScripts\SDEV140_04D.bat"
-
