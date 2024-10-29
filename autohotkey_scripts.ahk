@@ -1,4 +1,4 @@
-#For AutoHotkey v2.0
+; For AutoHotkey v2.0
 
 ; To run this script on startup:
 ; - Create a shortcut for this .ahk file.
