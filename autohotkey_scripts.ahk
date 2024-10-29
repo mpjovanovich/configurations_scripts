@@ -1,39 +1,53 @@
-; To run on startup:
-; Create a shortcut for the ahk file.
-; Press the Windows key + R to open the Run dialog box.
-; Type shell:startup and press Enter.
-; Put the shortcut here.
+#For AutoHotkey v2.0
 
-; See for numpad keys: https://www.autohotkey.com/docs/v1/KeyList.htm#numpad
+; To run this script on startup:
+; - Create a shortcut for this .ahk file.
+; - Press Windows key + R to open the Run dialog box.
+; - Type shell:startup and press Enter.
+; - Place the shortcut in the Startup folder.
 
-; These scroll too far for my liking, so override
-PgUp::{
-    Loop 3 {
+; Global variable to set scroll amount
+global scrollAmount := 3
+
+; PgUp and PgDn remapping with multiple "Up" or "Down" scrolls
+PgUp::
+{
+    Loop scrollAmount
         Send "{Up}"
-    }
 }
-PgDn::{
-    Loop 3 {
+
+PgDn::
+{
+    Loop scrollAmount
         Send "{Down}"
+}
+
+NumpadAdd::
+{
+    if GetKeyState("NumLock", "T") {
+        ; If Num Lock is on, send NumpadAdd
+        Send "{NumpadAdd}"
+    } else {
+        ; If Num Lock is off, scroll up `scrollAmount` times
+        Loop scrollAmount
+            Send "{WheelUp}"
     }
 }
 
-; Save my middle finger from falling off.
-F1::{
-    Loop 3 {
-        Send "{Up}"
+NumpadEnter::
+{
+    if GetKeyState("NumLock", "T") {
+        ; If Num Lock is on, send NumpadAdd
+        Send "{NumpadEnter}"
+    } else {
+        ; If Num Lock is off, scroll down `scrollAmount` times
+        Loop scrollAmount
+            Send "{WheelDown}"
     }
 }
-F2::{
-    Loop 3 {
-        Send "{Down}"
-    }
-}
-F3::F1
-F4::F2
 
+; Alt + Numpad shortcuts for running scripts
+; !Numpad1::Run "D:\CourseScripts\SDEV120_02D.bat"
+; !Numpad2::Run "D:\CourseScripts\SDEV120_C8D.bat"
+; !Numpad3::Run "D:\CourseScripts\SDEV140_04D.bat"
 
-; ^ = Ctrl
-; ! = Alt
-!Numpad1::Run 'D:\CourseScripts\SDEV120_01D.bat'
-!Numpad2::Run 'D:\CourseScripts\SDEV120_05D.bat'
