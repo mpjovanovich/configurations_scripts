@@ -1,0 +1,60 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "eeyore.yapf"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.matchBrackets": "always",
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.fontFamily": "'Monaspace Neon', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "350",
+  "editor.linkedEditing": true,
+  // Use all of them except for the comparison operators b/c they look like trash
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', '-ss09'",
+  "editor.lineHeight": 1.4,
+  "editor.lineNumbers": "on",
+  "editor.formatOnSave": true,
+  "editor.foldingHighlight": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "all",
+  "editor.guides.indentation": false,
+  "editor.minimap.autohide": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.padding.bottom": 20,
+  "editor.padding.top": 20,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontFamily": "Consolas, monospace",
+  "window.commandCenter": true,
+  "window.zoomLevel": 1.2,
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorCustomizations": {
+    "editor.linkedEditingBackground": "#4f6aa3c5"
+  },
+  "workbench.editor.showTabs": "multiple",
+  "workbench.iconTheme": "vscode-icons",
+  "breadcrumbs.enabled": false,
+  "zenMode.fullScreen": false,
+
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-x>": false,
+    "<C-p>": false,
+    "<C-z>": false,
+    "<C-f>": false
+  },
+  "vim.useSystemClipboard": true,
+  "vim.foldfix": true,
+  "vim.vimrc.enable": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false
+}
