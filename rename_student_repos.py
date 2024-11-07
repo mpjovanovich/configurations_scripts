@@ -27,8 +27,7 @@ def rename_directories(mapping_file, target_dir):
                     dir_path = Path(target_dir) / dirname
                     if dir_path.is_dir() and old_name in dirname:
                         # Replace old_name with new_name in the directory name
-                        new_dirname = dirname.replace(old_name, new_name)
-                        new_path = Path(target_dir) / new_dirname
+                        new_path = Path(target_dir) / new_name
                         dir_path.rename(new_path)
                         print(f"Renamed: {new_name}")
                         found = True
