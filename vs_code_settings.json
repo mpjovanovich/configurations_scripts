@@ -11,6 +11,7 @@
   "editor.fontWeight": "350",
   "editor.linkedEditing": true,
   // Use all of them except for the comparison operators b/c they look like trash
+  // See: https://monaspace.githubnext.com/#code-ligatures
   "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', '-ss09'",
   "editor.lineHeight": 1.4,
   "editor.lineNumbers": "on",
