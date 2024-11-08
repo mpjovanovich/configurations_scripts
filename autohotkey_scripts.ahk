@@ -23,8 +23,8 @@ PgDn::
 }
 
 #HotIf !GetKeyState("NumLock", "T")
-NumpadAdd::Send "{WheelUp " scrollAmount "}"
-NumpadEnter::Send "{WheelDown " scrollAmount "}"
+NumpadAdd::Send "{WheelUp}"
+NumpadEnter::Send "{WheelDown}"
 #HotIf
 
 ; Alt + Numpad shortcuts for running scripts
