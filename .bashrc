@@ -1,4 +1,4 @@
-# Don't replace all of the stuff that's already in the default bashrc!
+# DON'T JUST DROP THIS IN PLACE!
 # These are just some options to add.
 
 #######################################################################
@@ -28,21 +28,6 @@ export LIBGL_ALWAYS_INDIRECT=1
 alias python=python3
 alias apt-all='sudo apt update && sudo apt upgrade -y'
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mpjovanovich/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mpjovanovich/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mpjovanovich/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mpjovanovich/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 function git_acp() {
     git add .
     git commit --allow-empty-message -a -m "$1"
@@ -59,5 +44,6 @@ export NVM_DIR="$HOME/.nvm"
 # Add symlink in WSL: sudo ln -s /mnt/c/platform-tools/adb.exe /usr/bin/adb
 export ANDROID_HOME="/mnt/c/Users/mpjov/AppData/Local/Android/Sdk"
 
-# This didn't do anything - was an attempt to try to get expo to work on the phone
-# export REACT_NATIVE_PACKAGER_HOSTNAME=192.168.12.253
+# Shorthand for my user profile
+# Yes, it's lowercase - but it's worth it.
+export user="/mnt/c/Users/mpjovanovich"
