@@ -1,9 +1,11 @@
 {
-  "[python]": {
-    "editor.defaultFormatter": "eeyore.yapf"
-  },
   "breadcrumbs.enabled": false,
+  "cursor.cpp.disabledLanguages": ["plaintext"],
   "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.codeLens": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.foldingHighlight": false,
   "editor.fontFamily": "'Monaspace Neon', Consolas, 'Courier New', monospace",
@@ -32,28 +34,39 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": false,
+  "explorer.compactFolders": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "search.smartCase": true,
   "terminal.integrated.fontFamily": "Consolas, monospace",
   "terminal.integrated.fontSize": 16,
   "vim.foldfix": true,
   "vim.handleKeys": {
     "<C-a>": false,
+    "<C-b>": false,
     "<C-c>": false,
     "<C-f>": false,
     "<C-p>": false,
     "<C-x>": false,
     "<C-z>": false
   },
+  "vim.ignorecase": false,
+  "vim.smartcase": false,
   "vim.useSystemClipboard": true,
   "vim.vimrc.enable": true,
+  "vsicons.dontShowNewVersionMessage": true,
   "window.commandCenter": true,
+  "window.restoreWindows": "none",
   "window.zoomLevel": 1.2,
   "workbench.colorCustomizations": {
     "editor.linkedEditingBackground": "#4f6aa3c5"
   },
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.editor.showTabs": "multiple",
   "workbench.iconTheme": "vscode-icons",
+  "[python]": {
+    "editor.defaultFormatter": "eeyore.yapf"
+  },
   "zenMode.fullScreen": false
 }
