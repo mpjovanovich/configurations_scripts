@@ -1,5 +1,5 @@
 # DON'T JUST DROP THIS IN PLACE!
-# These are just some options to add.
+# These are just notes on things that I usually add.
 
 #######################################################################
 ## Mike's custom stuff
@@ -11,39 +11,36 @@ alias ls='ls --color=none'
 ## 036 = cyan color. Works well with the current color scheme.
 export PS1="\[\033[01;36m\]\u: \[\e[01;37m\]"
 
-export PATH="/usr/lib/wsl/lib:$PATH"
-export PATH="/usr/local/cuda-12.2/bin${PATH:+:${PATH}}"
-
-export LD_LIBRARY_PATH="/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
-export CUDA_HOME="/usr/local/cuda"
-
 ## Set the default editor for all programs
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-## Needed for X server
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-export LIBGL_ALWAYS_INDIRECT=1
-
 alias python=python3
-alias apt-all='sudo apt update && sudo apt upgrade -y'
 
-function git_acp() {
-    git add .
-    git commit --allow-empty-message -a -m "$1"
-    git push
-}
+# Shorthand for my user profile
+# Yes, it's lowercase - but it's worth it.
+export user="/mnt/c/Users/mpjovanovich"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Make sure to have this file in place; convenience bash scripts
+source ~/.bash_functions
+
+## PATH additions if applicable
+#export PATH="$PATH:/mnt/c/Users/mpjov/AppData/Local/Programs/cursor/resources/app/bin/"
+#export PATH=$PATH:/usr/local/go/bin
+
+## Needed for X server if using it
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+#export LIBGL_ALWAYS_INDIRECT=1
+
+## CUDA stuff - not relevant unless you're using it
+#export PATH="/usr/lib/wsl/lib:$PATH"
+#export PATH="/usr/local/cuda-12.2/bin${PATH:+:${PATH}}"
+
+#export LD_LIBRARY_PATH="/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+#export CUDA_HOME="/usr/local/cuda"
 
 # To launch native windows ADB from WSL2:
 # Go to C:\Users\mpjov\AppData\Local\Android\Sdk\platform-tools
 # Make a copy of adb.exe, and call it adb
 # Add symlink in WSL: sudo ln -s /mnt/c/platform-tools/adb.exe /usr/bin/adb
-export ANDROID_HOME="/mnt/c/Users/mpjov/AppData/Local/Android/Sdk"
-
-# Shorthand for my user profile
-# Yes, it's lowercase - but it's worth it.
-export user="/mnt/c/Users/mpjovanovich"
+# export ANDROID_HOME="/mnt/c/Users/mpjov/AppData/Local/Android/Sdk"
