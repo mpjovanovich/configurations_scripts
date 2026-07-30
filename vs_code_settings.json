@@ -1,9 +1,7 @@
 {
-  "breadcrumbs.enabled": false,
-  "cursor.cpp.disabledLanguages": ["plaintext"],
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
   },
   "editor.codeLens": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -20,7 +18,7 @@
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.matchBrackets": "always",
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
@@ -49,7 +47,7 @@
     "<C-f>": false,
     "<C-p>": false,
     "<C-x>": false,
-    "<C-z>": false
+    "<C-z>": false,
   },
   "vim.ignorecase": false,
   "vim.smartcase": false,
@@ -60,13 +58,20 @@
   "window.restoreWindows": "none",
   "window.zoomLevel": 1.2,
   "workbench.colorCustomizations": {
-    "editor.linkedEditingBackground": "#4f6aa3c5"
+    "editor.linkedEditingBackground": "#4f6aa3c5",
   },
   "workbench.colorTheme": "Atom One Dark",
   "workbench.editor.showTabs": "multiple",
   "workbench.iconTheme": "vscode-icons",
-  "[python]": {
-    "editor.defaultFormatter": "eeyore.yapf"
+  "[csharp]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+    },
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
   },
-  "zenMode.fullScreen": false
+  "[python]": {
+    "editor.defaultFormatter": "eeyore.yapf",
+  },
+  "zenMode.fullScreen": false,
+  "terminal.integrated.initialHint": false,
 }
