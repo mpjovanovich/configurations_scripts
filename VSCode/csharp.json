@@ -1,0 +1,32 @@
+{
+	"Csharp Class": {
+		"prefix": "csharpclass",
+		"body": [
+		"$1 class ${TM_FILENAME_BASE}",
+		"{",
+		"}"
+		]
+	},
+	"Csharp Interface": {
+		"prefix": "csharpinterface",
+		"body": [
+		"$1 interface ${TM_FILENAME_BASE}",
+		"{",
+		"}"
+		]
+	},
+	"Csharp Enum": {
+		"prefix": "csharpenum",
+		"body": [
+		"$1 enum ${TM_FILENAME_BASE}",
+		"{",
+		"}"
+		]
+	},
+	"Csharp Record": {
+		"prefix": "csharprecord",
+		"body": [
+		"$1 record ${TM_FILENAME_BASE}",
+		]
+	}
+}
